@@ -1,0 +1,1 @@
+Simple exercise of implementing `cout` and `cin` in C++.
