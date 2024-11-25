@@ -1,12 +1,9 @@
 #include <iostream>
 
 int main() {
-    std::string str = "hello";
-    double n = 1231.32523;
-    std::cout << str << std::endl;
+    std::string str;
+    double n;
+    std::cin >> n >> str;
     std::cout << n << std::endl;
-    double p = 31.0;
-    std::cout << p << std::endl;
-    std::cin >> str;
-    std::cout << str;
+    std::cout << str << std::endl;
 }
