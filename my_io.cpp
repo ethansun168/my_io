@@ -100,6 +100,26 @@ public:
         return my_cin;
     }
 
+    friend My_Cin& operator>>(My_Cin& my_cin, char& ch) {
+        
+        // If left over from previous cin
+        if (!my_cin.isDelimiter(my_cin.curChar)) {
+            ch = my_cin.curChar;
+        }
+        else {
+            // Keep reading until no delimiter
+            my_cin.bytesRead += read(0, &my_cin.curChar, 1);
+            while(my_cin.isDelimiter(my_cin.curChar)) {
+                my_cin.bytesRead += read(0, &my_cin.curChar, 1);
+            }
+            ch = my_cin.curChar;
+        }
+
+        my_cin.bytesRead += read(0, &my_cin.curChar, 1);
+        return my_cin;
+
+    }
+
     friend My_Cin& operator>>(My_Cin& my_cin, int& n) {
         // TODO: handle integer overflow
         n = 0;
@@ -179,6 +199,7 @@ int main() {
     std::string str2;
     int n;
     double d;
+    char ch;
 
     // my_cout << "Enter a string: ";
     // my_cin >> str2;
@@ -191,12 +212,18 @@ int main() {
     // my_cin >> d;
     // my_cout << "You entered: " << d << "\n";
 
-    my_cout << "Enter something random: ";
-    my_cin >> n >> d >> str;
-    my_cout << n << "\n";
-    my_cout << d << "\n";
-    my_cout << str << "\n";
-    
+    my_cout << "Enter a char: ";
+    my_cin >> ch;
+    my_cout << "You entered: " << ch << "\n";
+
+    // my_cout << "Enter something random: ";
+    // my_cin >> n >> d >> ch >> str;
+    // my_cout << n << "\n";
+    // my_cout << d << "\n";
+    // my_cout << ch << "\n";
+    // my_cout << str << "\n";
+
+    my_cout << "Bytes read: " << my_cin.getBytesRead();
 
     write(1, "\n", 1);
     return 0;
