@@ -1,2 +1,0 @@
-g++ -g my_io.cpp -o my_io.exe
-./my_io.exe
