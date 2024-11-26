@@ -10,3 +10,11 @@ Enter a string: You entered: fjkwqhekjfhwjekahl2123,123.``1123
 Enter an int: You entered: 123
 Enter a double: You entered: 123.123
 Enter a char: You entered: a
+123
+0.123
+.
+safdsafsdf
+123
+12312.321
+1
+32fkalwj

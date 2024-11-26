@@ -6,9 +6,11 @@ CXXFLAGS = -std=c++17 -Wall
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 TARGET = main
-INPUT_FILE = input.txt
-EXPECTED_OUTPUT = expected_output.txt
-ACTUAL_OUTPUT = actual_output.txt
+TEST_DIR = tests
+
+INPUT_FILE = $(TEST_DIR)/input.txt
+EXPECTED_OUTPUT = $(TEST_DIR)/expected_output.txt
+ACTUAL_OUTPUT = $(TEST_DIR)/actual_output.txt
 
 # Default target
 all: $(TARGET)

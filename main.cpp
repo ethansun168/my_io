@@ -39,12 +39,19 @@ int main() {
     my_cin >> ch;
     my_cout << "You entered: " << ch << "\n";
 
-    // my_cout << "Enter something random: ";
-    // my_cin >> n >> d >> ch >> str;
-    // my_cout << n << "\n";
-    // my_cout << d << "\n";
-    // my_cout << ch << "\n";
-    // my_cout << str << "\n";
+    my_cin >> str2;
+
+    my_cin >> n >> d >> ch >> str;
+    my_cout << n << "\n";
+    my_cout << d << "\n";
+    my_cout << ch << "\n";
+    my_cout << str << "\n";
+
+    my_cin >> n >> d >> ch >> str;
+    my_cout << n << "\n";
+    my_cout << d << "\n";
+    my_cout << ch << "\n";
+    my_cout << str << "\n";
 
     // my_cout << "Bytes read: " << my_cin.getBytesRead() << '\n';
 
